@@ -28,9 +28,12 @@ Step 4:
    c) Subset the dataset selecting the columns corresponding to the category above
 
 Step 5:
+
    a) Use the melt function to stacks the features value columns into a single column of features data.
    This functionality is provided by the reshape2 library
+
    b) use acast to cast the data into a 3d array that summarizes the data using the mean of each variable for each activity and each subject.  
+   
    -The fist dimension of the array indexes the subjects
    - The second dimension of the array is indexed by the activities
    - The third dimension of the array indexes the features
