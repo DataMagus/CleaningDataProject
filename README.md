@@ -22,3 +22,21 @@ a) The analysis file combines the testing and training data sets by rbinding the
 b) The analysis file combines the test subject and train subject data sets by rbinding them vertically
 c) The analysis file combines the test activity and train activity data sets by rbinding them vertically
 
+Step 4:
+a) Classify the feature names whether they include mean() or std() in their name
+b) Select the features from the combined dataframe that belong to the above category
+c) Subset the dataset selecting the columns corresponding to the category above
+
+Step 5:
+a) Use the melt function to stacks the features value columns into a single column of features data.
+   This functionality is provided by the reshape2 library
+b) use acast to cast the data into a 3d array that summarizes the data using the mean of each variable for each activity and each subject.
+    -The fist dimension of the array indexes the subjects
+    - The second dimension of the array is indexed by the activities
+    - The third dimension of the array indexes the features
+    
+Step 6
+a) Using plyer flatten the 3d array into a table
+b) shuffle the columns so that we have "subject","activity","feature label","feature value"
+c) write the tidy data to tidyActivityRecognitionData.txt without row.names
+
