@@ -6,13 +6,13 @@ A Tidy dataset is generated via the analysis file tidyDataproject.R
 Place the tidyDataproject.R in the /UCI HAR Dataset directory and source it
 
 Step 1: 
-   a) The analysis file reads in the training data from the file \Test\X_test.txt
+  * a) The analysis file reads in the training data from the file \Test\X_test.txt
    
-   b) The analysis file reads in the activity data from the file \Test\Y_test.txt
+  * b) The analysis file reads in the activity data from the file \Test\Y_test.txt
    
-   c) The analysis file substitutes the activity index for the actual activity name for ease of readibility
+  * c) The analysis file substitutes the activity index for the actual activity name for ease of readibility
    
-   d) The analysis file reads in the testing subject data from the file \Test\subject_test.txt
+  * d) The analysis file reads in the testing subject data from the file \Test\subject_test.txt
 
 Step 2: 
    a) The analysis file reads in the training data from the file \Train\X_train.txt
