@@ -1,9 +1,9 @@
 CleaningDataProject
 ===================
 
-Repository for the Getting and Cleaning Data class project
-
 A Tidy dataset is generated via the analysis file tidyDataproject.R
+
+Place the tidyDataproject.R in the /UCI HAR Dataset directory and source it
 
 Step 1: 
 a) The analysis file reads in the training data from the file \Test\X_test.txt
