@@ -5,12 +5,13 @@ This codebook provides information for a data set derived from the data set in h
 The original data set corresponds to measurements of the mean and standard deviation for each measurement in the dataset from
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip. For the project, the average of each variable was calculated for each subject and each activity and summarized in a tidy data set. 
 
+
 The records in the tidy data set have the following format:
 
   subject activity     feature label feature value
-1       1   LAYING tBodyAcc-mean()-X    0.22159824
-2       1   LAYING tBodyAcc-mean()-Y   -0.04051395
-3       1   LAYING tBodyAcc-mean()-Z   -0.11320355
+1       1   LAYING mean_tBodyAcc-mean()-X    0.22159824
+2       1   LAYING mean_tBodyAcc-mean()-Y   -0.04051395
+3       1   LAYING mean_tBodyAcc-mean()-Z   -0.11320355
 ...    ...  ...                          ...
 
 - Features are normalized and bounded within [-1,1].
@@ -28,85 +29,85 @@ The records in the tidy data set have the following format:
 
 - Feature label descriptions:
 
-tBodyAcc-mean()-X		Mean of the mean time domain triaxial body acceleration from accelerometer in X-axis
-tBodyAcc-mean()-Y  		Mean of the mean time domain triaxial body acceleration from accelerometer in Y-axis
-tBodyAcc-mean()-Z  		Mean of the mean time domain triaxial body acceleration from accelerometer in Z-axis
-tBodyAcc-std()-X   		Mean of the std of time domain triaxial body acceleration from accelerometer in X-axis
-tBodyAcc-std()-Y   		Mean of the std of time domain triaxial body acceleration from accelerometer in Y-axis
-tBodyAcc-std()-Z		Mean of the std of time domain triaxial body acceleration from accelerometer in Z-axis
-tGravityAcc-mean()-X		Mean of the mean time domain triaxial gravity acceleration from accelerometer in X-axis
-tGravityAcc-mean()-Y		Mean of the mean time domain triaxial gravity acceleration from accelerometer in Y-axis
-tGravityAcc-mean()-Z		Mean of the mean time domain triaxial gravity acceleration from accelerometer in Z-axis
-tGravityAcc-std()-X		Mean of the std of time domain triaxial gravity acceleration from accelerometer in X-axis
-tGravityAcc-std()-Y		Mean of the std of time domain triaxial gravity acceleration from accelerometer in Y-axis
-tGravityAcc-std()-Z		Mean of the std of time domain triaxial gravity acceleration from accelerometer in Z-axis
-tBodyAccJerk-mean()-X 		Mean of the mean time domain triaxial body acceleration jerk from accelerometer in X-axis
-tBodyAccJerk-mean()-Y		Mean of the mean time domain triaxial body acceleration jerk from accelerometer in Y-axis
-tBodyAccJerk-mean()-Z		Mean of the mean time domain triaxial body acceleration jerk from accelerometer in Z-axis
-tBodyAccJerk-std()-X		Mean of the std of time domain triaxial body acceleration jerk from accelerometer in X-axis
-tBodyAccJerk-std()-Y		Mean of the std of time domain triaxial body acceleration jerk from accelerometer in Y-axis
-tBodyAccJerk-std()-Z		Mean of the std of time domain triaxial body acceleration jerk from accelerometer in Z-axis
-tBodyGyro-mean()-X		Mean of the mean time domain triaxial body speed from gyroscope in X-axis
-tBodyGyro-mean()-Y		Mean of the mean time domain triaxial body speed from gyroscope in Y-axis
-tBodyGyro-mean()-Z		Mean of the mean time domain triaxial body speed from gyroscope in Z-axis
-tBodyGyro-std()-X		Mean of the std time domain triaxial body speed from gyroscope in X-axis
-tBodyGyro-std()-Y		Mean of the std time domain triaxial body speed from gyroscope in Y-axis
-tBodyGyro-std()-Z		Mean of the std time domain triaxial body speed from gyroscope in Z-axis
-tBodyGyroJerk-mean()-X		Mean of the mean time domain triaxial body speed jerk from gyroscop in X-axis
-tBodyGyroJerk-mean()-Y		Mean of the mean time domain triaxial body speed jerk from gyroscop in Y-axis
-tBodyGyroJerk-mean()-Z		Mean of the mean time domain triaxial body speed jerk from gyroscop in Z-axis
-tBodyGyroJerk-std()-X		Mean of the std time domain triaxial body speed jerk from gyroscope in X-axis
-tBodyGyroJerk-std()-Y		Mean of the std time domain triaxial body speed jerj from gyroscope in Y-axis
-tBodyGyroJerk-std()-Z		Mean of the std time domain triaxial body speed jerk from gyroscope in Z-axis
-tBodyAccMag-mean()		Mean of the mean estimated time domain triaxial body acceleration
-tBodyAccMag-std()		Mean of the std of the estimated time domain triaxial body acceleration
-tGravityAccMag-mean()		Mean of the mean estimated time domain triaxial gravity acceleration	
-tGravityAccMag-std()		Mean of the std of the estimated time domain triaxial gravity acceleration
-tBodyAccJerkMag-mean()		Mean of the mean time domain triaxial body acceleration jerk from accelerometer
-tBodyAccJerkMag-std()		Mean of the std of time domain triaxial body acceleration jerk from accelerometer
-tBodyGyroMag-mean()		Mean of the estimated mean time domain triaxial body speed from gyroscope
-tBodyGyroMag-std()		Mean of the estimated std of time domain triaxial body speed from gyroscope
-tBodyGyroJerkMag-mean()		Mean of the estimated mean time domain triaxial body speed jerk from gyroscope
-tBodyGyroJerkMag-std()		Mean of the estimated std of time domain triaxial body speed jerk from gyroscope
-fBodyAcc-mean()-X		Mean of the mean freq domain triaxial body acceleration from accelerometer in X-axis
-fBodyAcc-mean()-Y		Mean of the mean freq domain triaxial body acceleration from accelerometer in Y-axis
-fBodyAcc-mean()-Z		Mean of the mean freq domain triaxial body acceleration from accelerometer in z-axis
-fBodyAcc-std()-X		Mean of the std of freq domain triaxial body acceleration from accelerometer in X-axis
-fBodyAcc-std()-Y		Mean of the std of freq domain triaxial body acceleration from accelerometer in Y-axis
-fBodyAcc-std()-Z		Mean of the std of freq domain triaxial body acceleration from accelerometer in Z-axis
-fBodyAcc-meanFreq()-X		Mean of the mean freq domain triaxial body acceleration from accelerometer in X-axis
-fBodyAcc-meanFreq()-Y		Mean of the mean freq domain triaxial body acceleration from accelerometer in Y-axis	
-fBodyAcc-meanFreq()-Z		Mean of the mean freq domain triaxial body acceleration from accelerometer in Y-axis
-fBodyAccJerk-mean()-X		Mean of the mean freq domain triaxial gravity acceleration jerk from accelerometer in X-axis
-fBodyAccJerk-mean()-Y		Mean of the mean freq domain triaxial gravity acceleration jerk from accelerometer in Y-axis
-fBodyAccJerk-mean()-Z		Mean of the mean freq domain triaxial gravity acceleration jerk from accelerometer in Z-axis
-fBodyAccJerk-std()-X		Mean of the std of freq domain triaxial gravity acceleration jerk from accelerometer in X-axis
-fBodyAccJerk-std()-Y		Mean of the std of freq domain triaxial gravity acceleration jerk from accelerometer in Y-axis
-fBodyAccJerk-std()-Z		Mean of the std of freq domain triaxial gravity acceleration jerk from accelerometer in Z-axis
-fBodyAccJerk-meanFreq()-X	Mean of the mean frequency of triaxial gravity acceleration jerk from accelerometer in X-axis
-fBodyAccJerk-meanFreq()-Y	Mean of the mean frequency of triaxial gravity acceleration jerk from accelerometer in Y-axis
-fBodyAccJerk-meanFreq()-Z	Mean of the mean frequency of triaxial gravity acceleration jerk from accelerometer in Z-axis
-fBodyGyro-mean()-X		Mean of the mean freq domain triaxial body speed from gyroscope in X-axis
-fBodyGyro-mean()-Y		Mean of the mean freq domain triaxial body speed from gyroscope in Y-axis
-fBodyGyro-mean()-Z		Mean of the mean freq domain triaxial body speed from gyroscope in Z-axis
-fBodyGyro-std()-X		Mean of the std of freq domain triaxial body speed from gyroscope in X-axis
-fBodyGyro-std()-Y		Mean of the std of freq domain triaxial body speed from gyroscope in Y-axis
-fBodyGyro-std()-Z		Mean of the std of freq domain triaxial body speed from gyroscope in Z-axis
-fBodyGyro-meanFreq()-X		Mean of the mean frequency of triaxial body speed from gyroscope in X-axis
-fBodyGyro-meanFreq()-Y		Mean of the mean frequency of triaxial body speed from gyroscope in Y-axis
-fBodyGyro-meanFreq()-Z		Mean of the mean frequency of triaxial body speed from gyroscope in Z-axis
-fBodyAccMag-mean()		Mean of the mean freq domain triaxial body acceleration from accelerometer
-fBodyAccMag-std()		Mean of the std of freq domain triaxial body acceleration from accelerometer
-fBodyAccMag-meanFreq()		Mean of the mean of freq domain triaxial body acceleration from accelerometer
-fBodyBodyAccJerkMag-mean()	Mean of the mean frequency of freq domain triaxial body acceleration jerk from accelerometer
-fBodyBodyAccJerkMag-std()	Mean of the std of frequency of freq domain triaxial body acceleration jerk from accelerometer
-fBodyBodyAccJerkMag-meanFreq() 	Mean of the mean frequency of freq domain triaxial body acceleration jerk from accelerometer
-fBodyBodyGyroMag-mean()		Mean of the mean frequency of freq domain triaxial body speed from gyroscope
-fBodyBodyGyroMag-std()		Mean of the std of freq domain triaxial body speed from gyroscope
-fBodyBodyGyroMag-meanFreq()	Mean of the mean of mean frequency in freq domain triaxial speed jerk from gyroscope
-fBodyBodyGyroJerkMag-mean()	Mean of the mean of mean freq domain triaxial speed jerk from gyroscope
-fBodyBodyGyroJerkMag-std()	Mean of the std of mean freq domain triaxial speed jerk from gyroscope
-fBodyBodyGyroJerkMag-meanFreq() Mean of the mean freq of the freq domain triaxial speed jerk from gyroscope
+mean_tBodyAcc-mean()-X			Mean of the mean time domain triaxial body acceleration from accelerometer in X-axis
+mean_tBodyAcc-mean()-Y  		Mean of the mean time domain triaxial body acceleration from accelerometer in Y-axis
+mean_tBodyAcc-mean()-Z  		Mean of the mean time domain triaxial body acceleration from accelerometer in Z-axis
+mean_tBodyAcc-std()-X   		Mean of the std of time domain triaxial body acceleration from accelerometer in X-axis
+mean_tBodyAcc-std()-Y   		Mean of the std of time domain triaxial body acceleration from accelerometer in Y-axis
+mean_tBodyAcc-std()-Z			Mean of the std of time domain triaxial body acceleration from accelerometer in Z-axis
+mean_tGravityAcc-mean()-X		Mean of the mean time domain triaxial gravity acceleration from accelerometer in X-axis
+mean_tGravityAcc-mean()-Y		Mean of the mean time domain triaxial gravity acceleration from accelerometer in Y-axis
+mean_tGravityAcc-mean()-Z		Mean of the mean time domain triaxial gravity acceleration from accelerometer in Z-axis
+mean_tGravityAcc-std()-X		Mean of the std of time domain triaxial gravity acceleration from accelerometer in X-axis
+mean_tGravityAcc-std()-Y		Mean of the std of time domain triaxial gravity acceleration from accelerometer in Y-axis
+mean_tGravityAcc-std()-Z		Mean of the std of time domain triaxial gravity acceleration from accelerometer in Z-axis
+mean_tBodyAccJerk-mean()-X 		Mean of the mean time domain triaxial body acceleration jerk from accelerometer in X-axis
+mean_tBodyAccJerk-mean()-Y		Mean of the mean time domain triaxial body acceleration jerk from accelerometer in Y-axis
+mean_tBodyAccJerk-mean()-Z		Mean of the mean time domain triaxial body acceleration jerk from accelerometer in Z-axis
+mean_tBodyAccJerk-std()-X		Mean of the std of time domain triaxial body acceleration jerk from accelerometer in X-axis
+mean_tBodyAccJerk-std()-Y		Mean of the std of time domain triaxial body acceleration jerk from accelerometer in Y-axis
+mean_tBodyAccJerk-std()-Z		Mean of the std of time domain triaxial body acceleration jerk from accelerometer in Z-axis
+mean_tBodyGyro-mean()-X			Mean of the mean time domain triaxial body speed from gyroscope in X-axis
+mean_tBodyGyro-mean()-Y			Mean of the mean time domain triaxial body speed from gyroscope in Y-axis
+mean_tBodyGyro-mean()-Z			Mean of the mean time domain triaxial body speed from gyroscope in Z-axis
+mean_tBodyGyro-std()-X			Mean of the std time domain triaxial body speed from gyroscope in X-axis
+mean_tBodyGyro-std()-Y			Mean of the std time domain triaxial body speed from gyroscope in Y-axis
+mean_tBodyGyro-std()-Z			Mean of the std time domain triaxial body speed from gyroscope in Z-axis
+mean_tBodyGyroJerk-mean()-X		Mean of the mean time domain triaxial body speed jerk from gyroscop in X-axis
+mean_tBodyGyroJerk-mean()-Y		Mean of the mean time domain triaxial body speed jerk from gyroscop in Y-axis
+mean_tBodyGyroJerk-mean()-Z		Mean of the mean time domain triaxial body speed jerk from gyroscop in Z-axis
+mean_tBodyGyroJerk-std()-X		Mean of the std time domain triaxial body speed jerk from gyroscope in X-axis
+mean_tBodyGyroJerk-std()-Y		Mean of the std time domain triaxial body speed jerj from gyroscope in Y-axis
+mean_tBodyGyroJerk-std()-Z		Mean of the std time domain triaxial body speed jerk from gyroscope in Z-axis
+mean_tBodyAccMag-mean()			Mean of the mean estimated time domain triaxial body acceleration
+mean_tBodyAccMag-std()			Mean of the std of the estimated time domain triaxial body acceleration
+mean_tGravityAccMag-mean()		Mean of the mean estimated time domain triaxial gravity acceleration	
+mean_tGravityAccMag-std()		Mean of the std of the estimated time domain triaxial gravity acceleration
+mean_tBodyAccJerkMag-mean()		Mean of the mean time domain triaxial body acceleration jerk from accelerometer
+mean_tBodyAccJerkMag-std()		Mean of the std of time domain triaxial body acceleration jerk from accelerometer
+mean_tBodyGyroMag-mean()		Mean of the estimated mean time domain triaxial body speed from gyroscope
+mean_tBodyGyroMag-std()			Mean of the estimated std of time domain triaxial body speed from gyroscope
+mean_tBodyGyroJerkMag-mean()		Mean of the estimated mean time domain triaxial body speed jerk from gyroscope
+mean_tBodyGyroJerkMag-std()		Mean of the estimated std of time domain triaxial body speed jerk from gyroscope
+mean_fBodyAcc-mean()-X			Mean of the mean freq domain triaxial body acceleration from accelerometer in X-axis
+mean_fBodyAcc-mean()-Y			Mean of the mean freq domain triaxial body acceleration from accelerometer in Y-axis
+mean_fBodyAcc-mean()-Z			Mean of the mean freq domain triaxial body acceleration from accelerometer in z-axis
+mean_fBodyAcc-std()-X			Mean of the std of freq domain triaxial body acceleration from accelerometer in X-axis
+mean_fBodyAcc-std()-Y			Mean of the std of freq domain triaxial body acceleration from accelerometer in Y-axis
+mean_fBodyAcc-std()-Z			Mean of the std of freq domain triaxial body acceleration from accelerometer in Z-axis
+mean_fBodyAcc-meanFreq()-X		Mean of the mean freq domain triaxial body acceleration from accelerometer in X-axis
+mean_fBodyAcc-meanFreq()-Y		Mean of the mean freq domain triaxial body acceleration from accelerometer in Y-axis	
+mean_fBodyAcc-meanFreq()-Z		Mean of the mean freq domain triaxial body acceleration from accelerometer in Y-axis
+mean_fBodyAccJerk-mean()-X		Mean of the mean freq domain triaxial gravity acceleration jerk from accelerometer in X-axis
+mean_fBodyAccJerk-mean()-Y		Mean of the mean freq domain triaxial gravity acceleration jerk from accelerometer in Y-axis
+mean_fBodyAccJerk-mean()-Z		Mean of the mean freq domain triaxial gravity acceleration jerk from accelerometer in Z-axis
+mean_fBodyAccJerk-std()-X		Mean of the std of freq domain triaxial gravity acceleration jerk from accelerometer in X-axis
+mean_fBodyAccJerk-std()-Y		Mean of the std of freq domain triaxial gravity acceleration jerk from accelerometer in Y-axis
+mean_fBodyAccJerk-std()-Z		Mean of the std of freq domain triaxial gravity acceleration jerk from accelerometer in Z-axis
+mean_fBodyAccJerk-meanFreq()-X		Mean of the mean frequency of triaxial gravity acceleration jerk from accelerometer in X-axis
+mean_fBodyAccJerk-meanFreq()-Y		Mean of the mean frequency of triaxial gravity acceleration jerk from accelerometer in Y-axis
+mean_fBodyAccJerk-meanFreq()-Z		Mean of the mean frequency of triaxial gravity acceleration jerk from accelerometer in Z-axis
+mean_fBodyGyro-mean()-X			Mean of the mean freq domain triaxial body speed from gyroscope in X-axis
+mean_fBodyGyro-mean()-Y			Mean of the mean freq domain triaxial body speed from gyroscope in Y-axis
+mean_fBodyGyro-mean()-Z			Mean of the mean freq domain triaxial body speed from gyroscope in Z-axis
+mean_fBodyGyro-std()-X			Mean of the std of freq domain triaxial body speed from gyroscope in X-axis
+mean_fBodyGyro-std()-Y			Mean of the std of freq domain triaxial body speed from gyroscope in Y-axis
+mean_fBodyGyro-std()-Z			Mean of the std of freq domain triaxial body speed from gyroscope in Z-axis
+mean_fBodyGyro-meanFreq()-X		Mean of the mean frequency of triaxial body speed from gyroscope in X-axis
+mean_fBodyGyro-meanFreq()-Y		Mean of the mean frequency of triaxial body speed from gyroscope in Y-axis
+mean_fBodyGyro-meanFreq()-Z		Mean of the mean frequency of triaxial body speed from gyroscope in Z-axis
+mean_fBodyAccMag-mean()			Mean of the mean freq domain triaxial body acceleration from accelerometer
+mean_fBodyAccMag-std()			Mean of the std of freq domain triaxial body acceleration from accelerometer
+mean_fBodyAccMag-meanFreq()		Mean of the mean of freq domain triaxial body acceleration from accelerometer
+mean_fBodyBodyAccJerkMag-mean()		Mean of the mean frequency of freq domain triaxial body acceleration jerk from accelerometer
+mean_fBodyBodyAccJerkMag-std()		Mean of the std of frequency of freq domain triaxial body acceleration jerk from accelerometer
+mean_fBodyBodyAccJerkMag-meanFreq() 	Mean of the mean frequency of freq domain triaxial body acceleration jerk from accelerometer
+mean_fBodyBodyGyroMag-mean()		Mean of the mean frequency of freq domain triaxial body speed from gyroscope
+mean_fBodyBodyGyroMag-std()		Mean of the std of freq domain triaxial body speed from gyroscope
+mean_fBodyBodyGyroMag-meanFreq()	Mean of the mean of mean frequency in freq domain triaxial speed jerk from gyroscope
+mean_fBodyBodyGyroJerkMag-mean()	Mean of the mean of mean freq domain triaxial speed jerk from gyroscope
+mean_fBodyBodyGyroJerkMag-std()		Mean of the std of mean freq domain triaxial speed jerk from gyroscope
+mean_fBodyBodyGyroJerkMag-meanFreq()	Mean of the mean freq of the freq domain triaxial speed jerk from gyroscope
 
 
 The original source of this data is:

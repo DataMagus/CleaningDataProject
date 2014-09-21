@@ -1,7 +1,12 @@
-# Getting and Cleaning Data project
+# Getting and Cleaning Data Class project
 # Generates a tidy data set for Human Activity Recognition
-# Source data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
-
+# A codebook for the dataset is available at https://github.com/DataMagus/CleaningDataProject.git
+#
+# The orginal data set was collected at UCI by
+# Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto. 
+# Smartlab - Non Linear Complex Systems Laboratory, UCI
+# https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
+###########################################################################################
 
 library(reshape2) # Required to melt the data
 library(plyr)     # used to flatten data into tidy data frame
@@ -70,6 +75,7 @@ names(combined.dataset.df) <-as.character(features.df$V2)
 category <- grepl('mean()',as.character(features.df$V2)) | grepl('std()',as.character(features.df$V2))
 # Select the measurements that meet the criteria
 measurements.with.means_std = combined.dataset.df[,category]
+names(measurements.with.means_std)<-paste("mean_",names(measurements.with.means_std),sep = "")
 # Check out the dimensions
 dim(measurements.with.means_std)
 
@@ -88,14 +94,15 @@ aux.df <- adply(ac,c(3,2,1))
 
 # Swap columns to have it by user by activity
 tidydata <- aux.df[,c(3,2,1,4)] 
+names(tidydata)<-c("subject","activity","feature.label","feature.value")
 #check to make sure it is tidy by user by activity so it looks like 
-#X2     X3                X1          V1
-#1  1 LAYING tBodyAcc-mean()-X  0.22159824
-#2  1 LAYING tBodyAcc-mean()-Y -0.04051395
-#3  1 LAYING tBodyAcc-mean()-Z -0.11320355
-#4  1 LAYING  tBodyAcc-std()-X -0.92805647
-#5  1 LAYING  tBodyAcc-std()-Y -0.83682741
-#6  1 LAYING  tBodyAcc-std()-Z -0.82606140
-names(tidydata)<-c("subject","activity","feature label","feature value")
+#subject activity          feature.label feature.value
+#1       1   LAYING mean_tBodyAcc-mean()-X    0.22159824
+#2       1   LAYING mean_tBodyAcc-mean()-Y   -0.04051395
+#3       1   LAYING mean_tBodyAcc-mean()-Z   -0.11320355
+#4       1   LAYING  mean_tBodyAcc-std()-X   -0.92805647
+#5       1   LAYING  mean_tBodyAcc-std()-Y   -0.83682741
+#6       1   LAYING  mean_tBodyAcc-std()-Z   -0.82606140
 head(tidydata)
+# write the tidy data set
 write.table(tidydata,file="tidyActivityRecognitionData.txt",row.names=FALSE)
