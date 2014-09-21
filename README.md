@@ -1,11 +1,11 @@
 CleaningDataProject
 ===================
 
-A Tidy dataset is generated via the analysis file tidyDataproject.R
+A Tidy dataset is generated via the analysis file run_analisys.R
 
 The codebook information is found in codebook.txt
 
-__To create the tidy data set:__ Place the tidyDataproject.R in the /UCI HAR Dataset directory and source it
+__To create the tidy data set:__ Place the run_analisys.R in the /UCI HAR Dataset directory and source it
 
 Step 1: 
   * a) The analysis file reads in the training data from the file \Test\X_test.txt
